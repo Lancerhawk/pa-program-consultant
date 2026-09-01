@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const indicator = document.getElementById("nav-indicator");
   const desktopLinks = Array.from(document.querySelectorAll("#desktop-nav .nav-link"));
   const mobileLinks = Array.from(document.querySelectorAll(".nav-link-mobile"));
-  const sectionIds = ["home", "about", "services", "staff", "training", "contact"];
+  const sectionIds = ["home", "about", "staff", "training", "contact"];
   let activeSection = "";
   let indicatorBootstrapped = false;
 
