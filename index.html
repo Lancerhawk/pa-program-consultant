@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Physician Assistant Program Consultant</title>
+    <link rel="icon" href="images/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+    <meta
+      name="description"
+      content="Tommasino Associates LLC provides consulting services for PA programs across the country to help them achieve and maintain accreditation."
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            screens: {
+              nav: "900px",
+            },
+          },
+        },
+      };
+      // Stop browser from restoring / jumping to #about (or any hash) on refresh
+      if ("scrollRestoration" in history) {
+        history.scrollRestoration = "manual";
+      }
+    </script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css?v=22" />
+  </head>
+  <body class="bg-white text-gray-900 antialiased">
+    <!-- Sticky header: email bar slides off; navbar locks flush to top -->
+    <div id="site-header">
+      <div id="header-slide">
+        <section id="top-bar" class="px-6">
+          <div class="max-w-7xl mx-auto flex flex-row items-center justify-between text-white py-2">
+            <div class="flex items-center gap-2 text-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+              </svg>
+              <a href="mailto:tapaconsultants@gmail.com" class="hover:underline">tapaconsultants@gmail.com</a>
+            </div>
+
+            <div class="flex gap-4">
+              <a href="#facebook" aria-label="Facebook" class="hover:opacity-80">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M22 12.07C22 6.48 17.52 2 11.93 2S1.86 6.48 1.86 12.07c0 5.02 3.66 9.18 8.44 9.93v-7.03H7.9v-2.9h2.4V9.41c0-2.37 1.41-3.68 3.57-3.68 1.03 0 2.12.18 2.12.18v2.33h-1.2c-1.18 0-1.55.73-1.55 1.48v1.78h2.64l-.42 2.9h-2.22V22c4.78-.75 8.44-4.91 8.44-9.93z" />
+                </svg>
+              </a>
+              <a href="#instagram" aria-label="Instagram" class="hover:opacity-80">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 01-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 017.8 2zm-.2 2A3.6 3.6 0 004 7.6v8.8A3.6 3.6 0 007.6 20h8.8a3.6 3.6 0 003.6-3.6V7.6A3.6 3.6 0 0016.4 4H7.6zm9.65 1.5a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 2a3 3 0 100 6 3 3 0 000-6z" />
+                </svg>
+              </a>
+              <a href="#linkedin" aria-label="LinkedIn" class="hover:opacity-80">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4V23h-4V8.5zM8.5 8.5h3.8v2h.05c.53-1 1.84-2.05 3.8-2.05 4.06 0 4.8 2.67 4.8 6.15V23h-4v-6.6c0-1.57-.03-3.6-2.2-3.6-2.2 0-2.54 1.72-2.54 3.5V23h-4V8.5z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <header class="bg-white shadow-md">
+          <nav>
+          <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="grid items-center gap-4 grid-cols-[1fr_auto] nav:grid-cols-[auto_1fr_auto] py-1.5">
+              <!-- Logo (left) — large, bar stays slim via tight padding -->
+              <a href="#home" class="justify-self-start flex items-center shrink-0 leading-none" aria-label="PA Program Consultant Home">
+                <img src="images/logo-nav.webp" alt="PA Program Consultant" class="h-12 w-auto nav:h-14 block" />
+              </a>
+
+              <!-- Nav links (center) — desktop only from 900px -->
+              <div id="desktop-nav" class="hidden nav:flex justify-self-center items-center flex-nowrap gap-x-1 lg:gap-x-3 relative whitespace-nowrap">
+                <a href="#home" data-section="home" class="nav-link text-gray-700 hover:text-blue-700 text-sm font-medium px-2 lg:px-3 py-1.5 transition-colors duration-300 whitespace-nowrap shrink-0"><span class="nav-label">Home</span></a>
+                <a href="#about" data-section="about" class="nav-link text-gray-700 hover:text-blue-700 text-sm font-medium px-2 lg:px-3 py-1.5 transition-colors duration-300 whitespace-nowrap shrink-0"><span class="nav-label">About Us</span></a>
+                <a href="#services" data-section="services" class="nav-link text-gray-700 hover:text-blue-700 text-sm font-medium px-2 lg:px-3 py-1.5 transition-colors duration-300 whitespace-nowrap shrink-0"><span class="nav-label">Accreditation Services</span></a>
+                <a href="#staff" data-section="staff" class="nav-link text-gray-700 hover:text-blue-700 text-sm font-medium px-2 lg:px-3 py-1.5 transition-colors duration-300 whitespace-nowrap shrink-0"><span class="nav-label">Our Staff</span></a>
+                <a href="#training" data-section="training" class="nav-link text-gray-700 hover:text-blue-700 text-sm font-medium px-2 lg:px-3 py-1.5 transition-colors duration-300 whitespace-nowrap shrink-0"><span class="nav-label">Staff Training</span></a>
+                <span id="nav-indicator" class="nav-indicator" aria-hidden="true"></span>
+              </div>
+
+              <!-- Contact / hamburger (right) -->
+              <div class="justify-self-end flex items-center shrink-0">
+                <a
+                  href="#contact"
+                  data-section="contact"
+                  class="nav-link-contact hidden nav:inline-flex bg-blue-700 hover:bg-blue-600 text-white text-sm font-medium px-4 py-2 rounded-md transition focus:outline-none focus:ring-2 focus:ring-blue-500 whitespace-nowrap"
+                >
+                  Contact Us
+                </a>
+                <button id="menuToggle" type="button" class="nav:hidden inline-flex items-center justify-center p-2 text-gray-700 hover:bg-gray-200 focus:outline-none" aria-label="Toggle menu">
+                  <svg id="menuIconOpen" class="h-6 w-6 block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                  </svg>
+                  <svg id="menuIconClose" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="nav:hidden hidden" id="mobile-menu">
+            <div class="space-y-1 px-4 pt-4 pb-3 border-t">
+              <a href="#home" data-section="home" class="nav-link-mobile block text-gray-700 hover:bg-gray-100 hover:text-blue-700 rounded-md px-3 py-2 text-base font-medium border-l-2 border-transparent transition-all duration-300">Home</a>
+              <a href="#about" data-section="about" class="nav-link-mobile block text-gray-700 hover:bg-gray-100 hover:text-blue-700 rounded-md px-3 py-2 text-base font-medium border-l-2 border-transparent transition-all duration-300">About Us</a>
+              <a href="#services" data-section="services" class="nav-link-mobile block text-gray-700 hover:bg-gray-100 hover:text-blue-700 rounded-md px-3 py-2 text-base font-medium border-l-2 border-transparent transition-all duration-300">Accreditation Services</a>
+              <a href="#staff" data-section="staff" class="nav-link-mobile block text-gray-700 hover:bg-gray-100 hover:text-blue-700 rounded-md px-3 py-2 text-base font-medium border-l-2 border-transparent transition-all duration-300">Our Staff</a>
+              <a href="#training" data-section="training" class="nav-link-mobile block text-gray-700 hover:bg-gray-100 hover:text-blue-700 rounded-md px-3 py-2 text-base font-medium border-l-2 border-transparent transition-all duration-300">Staff Training</a>
+              <a href="#contact" data-section="contact" class="nav-link-mobile block mt-2 bg-blue-700 hover:bg-blue-600 text-white text-base font-medium px-3 py-2 rounded-md">Contact Us</a>
+            </div>
+          </div>
+        </nav>
+        </header>
+      </div>
+    </div>
+
+    <main>
+      <!-- Hero -->
+      <section id="home" class="relative bg-gradient-to-r from-indigo-900 to-purple-900 overflow-hidden">
+        <div class="absolute inset-0">
+          <div class="absolute inset-0 bg-[url('images/hero-bg.webp')] bg-cover bg-center mix-blend-overlay opacity-40"></div>
+          <div class="absolute inset-0 bg-indigo-950/50"></div>
+        </div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-24 lg:px-8">
+          <div class="text-center">
+            <p class="mt-6 max-w-2xl mx-auto text-xl text-gray-200">Physician Assistant Program Consultant</p>
+            <h1 class="text-2xl tracking-tight mt-4 text-white sm:text-5xl lg:text-4xl font-semibold">PA Accrediation Services</h1>
+            <h2 class="text-2xl tracking-tight mt-4 text-white sm:text-5xl lg:text-4xl font-semibold">Done Right</h2>
+            <a
+              href="#staff"
+              class="inline-flex items-center justify-center mt-5 px-5 py-3 border border-white text-base font-medium rounded-sm text-white transition-colors hover:bg-white hover:text-indigo-900"
+            >
+              List of our Independent Contractors
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section id="about" class="pt-16 nav:pt-24 scroll-mt-22 max-w-7xl mx-auto px-4 py-10 flex flex-col nav:flex-row items-center gap-8 nav:gap-10">
+        <!-- Images: single on <900px, stacked overlap on ≥900px -->
+        <div class="about-media relative w-full nav:w-1/2 flex justify-center">
+          <div data-aos="fade-right" data-aos-offset="100" data-aos-easing="ease-in-sine" class="about-main w-full max-w-md nav:max-w-none nav:w-80 lg:w-96 shadow-lg rounded overflow-hidden">
+            <img src="images/about.webp" alt="Team collaborating" class="w-full h-auto object-cover aspect-[4/3] nav:aspect-auto" />
+          </div>
+          <div
+            data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000"
+            class="about-inset hidden nav:block absolute -bottom-8 left-0 w-44 lg:w-48 shadow-md rounded overflow-hidden border-4 border-white bg-white"
+          >
+            <img src="images/about.webp" alt="Team detail" class="w-full h-auto object-cover" />
+          </div>
+        </div>
+
+        <div class="w-full space-y-5 nav:space-y-6 nav:w-1/2">
+          <p class="text-blue-700 font-semibold uppercase">Who WE Are</p>
+          <h2 class="text-3xl nav:text-4xl font-bold leading-snug">
+            Achieve &amp; Maintain<br />
+            Accreditation
+          </h2>
+          <p class="text-gray-700">
+            To ensure your program achieves and maintains accreditation. Our experienced team is the right choice to achieve all of your program’s goals. Tommasino Associates LLC provides consulting
+            services for PA programs across the country to help them achieve and maintain accreditation.
+          </p>
+          <p class="text-gray-700">
+            Join our leaders who hold a wide variety of services to ensure the resulting program provides excellent PA education to develop high-performing successful Physician Assistants.
+          </p>
+
+          <div class="border-l-4 border-blue-700 pl-4 flex w-full items-start gap-4 mb-8">
+            <div class="p-4 bg-blue-900 rounded flex-shrink-0 text-white">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                <path
+                  d="m13.637 2.363l1.676.335c.09.018.164.084.19.173a.25.25 0 0 1-.062.249l-1.373 1.374a.88.88 0 0 1-.619.256H12.31L9.45 7.611A1.5 1.5 0 1 1 6.5 8a1.5 1.5 0 0 1 1.889-1.449l2.861-2.862V2.552c0-.232.092-.455.256-.619L12.88.559a.25.25 0 0 1 .249-.062c.089.026.155.1.173.19Z"
+                />
+                <path
+                  d="M2 8a6 6 0 1 0 11.769-1.656a.751.751 0 1 1 1.442-.413A7.5 7.5 0 1 1 8 0.5a.75.75 0 0 1 0 1.5A6 6 0 0 0 2 8Z"
+                />
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold">Our Goal</h3>
+              <p class="text-gray-700 text-sm">
+                Our goal is not only for you and your program but also to the nation. Succeeding with accreditation means your program will have continued success within today's ever-changing
+                healthcare industry.
+              </p>
+            </div>
+          </div>
+
+          <div class="text-left">
+            <a href="#staff" class="bg-blue-800 hover:bg-blue-900 text-white font-semibold px-6 py-3 rounded inline-block">Our Independant Contractor</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Banner -->
+      <section
+        id="services"
+        class="scroll-mt-22 relative overflow-hidden bg-fixed bg-cover bg-center text-white mt-16"
+        style="background-image: url('images/services-bg.webp')"
+      >
+        <div class="absolute inset-0 z-0" style="background-color: rgba(12, 29, 83, 0.7)"></div>
+
+        <div class="relative z-10 max-w-6xl mx-auto w-full px-4 py-16 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
+          <div class="w-full md:w-1/2 text-center flex flex-col items-center justify-center">
+            <p class="text-white text-sm font-semibold uppercase mb-2">Let’s help you!</p>
+            <h2 class="text-3xl sm:text-4xl font-bold mb-2">Accreditation Services</h2>
+            <p class="text-sm">Our 25 Years Of Experience</p>
+          </div>
+
+          <div class="hidden md:block self-stretch w-px bg-white/80" aria-hidden="true"></div>
+
+          <div class="w-full md:w-1/2 flex items-center justify-center">
+            <a href="#contact" class="border border-white px-6 py-2 font-semibold text-white transform hover:scale-105 transition duration-300">Contact us</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Grid -->
+      <section class="max-w-6xl mx-auto px-4 py-12">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div data-aos="fade-up" data-aos-duration="1000" class="feature-card service-card">
+            <div class="service-card-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+              </svg>
+            </div>
+            <h3>Provisional Application</h3>
+          </div>
+
+          <div data-aos="fade-up" data-aos-duration="1000" class="feature-card service-card">
+            <div class="service-card-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <h3>Provisional Monitoring</h3>
+          </div>
+
+          <div data-aos="fade-up" data-aos-duration="1000" class="feature-card service-card">
+            <div class="service-card-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3>Final Provisional</h3>
+          </div>
+
+          <div data-aos="fade-up" data-aos-duration="1000" class="feature-card service-card">
+            <div class="service-card-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182" />
+              </svg>
+            </div>
+            <h3>Continuing Accreditation</h3>
+          </div>
+
+          <div data-aos="fade-up" data-aos-duration="1000" class="feature-card service-card">
+            <div class="service-card-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
+              </svg>
+            </div>
+            <h3>Probation</h3>
+          </div>
+
+          <div data-aos="fade-up" data-aos-duration="1000" class="feature-card service-card">
+            <div class="service-card-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.174.1.385.158.593.158.136 0 .27-.027.396-.08l1.17-.585a1.125 1.125 0 011.45.415l1.297 2.247a1.125 1.125 0 01-.26 1.462l-.992.828c-.276.23-.438.583-.438.95 0 .367.162.72.438.95l.992.828c.424.353.534.954.26 1.462l-1.297 2.247a1.125 1.125 0 01-1.45.415l-1.17-.585a1.121 1.121 0 00-.396-.08c-.208 0-.419.058-.593.158-.332.183-.582.495-.645.87l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.063-.374-.313-.686-.645-.87a1.125 1.125 0 00-.593-.158 1.12 1.12 0 00-.396.08l-1.17.585a1.125 1.125 0 01-1.45-.415l-1.297-2.247a1.125 1.125 0 01.26-1.462l.992-.828c.276-.23.438-.583.438-.95 0-.367-.162-.72-.438-.95l-.992-.828a1.125 1.125 0 01-.26-1.462l1.297-2.247a1.125 1.125 0 011.45-.415l1.17.585c.126.053.26.08.396.08.208 0 .419-.058.593-.158.332-.183.582-.495.645-.87l.213-1.281z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <h3>Customized Services</h3>
+          </div>
+        </div>
+      </section>
+
+      <!-- Team -->
+      <section id="staff" class="pt-24 scroll-mt-22 bg-gray-100 text-gray-900 py-16">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+          <p class="text-blue-700 font-semibold text-sm mb-2">Physician Program Consultant</p>
+          <h2 class="text-2xl sm:text-3xl font-bold mb-10">Meet Our Talented Team</h2>
+
+          <div class="flex flex-wrap justify-center gap-6">
+            <!-- Charity -->
+            <div data-aos="flip-left" class="team-card relative group w-full max-w-[300px] h-[400px] overflow-hidden rounded-xl shadow-md">
+              <img src="images/team-charity.webp" alt="Charity Ramsey Irizarry" class="team-photo w-full h-full object-cover transition-transform duration-500" />
+              <div class="absolute inset-0 bg-black/40 z-0"></div>
+              <div class="team-default absolute inset-0 flex flex-col justify-end items-center text-white text-center transition-opacity duration-500 z-10 px-4 pb-6">
+                <h3 class="text-lg font-bold mb-2">Charity Ramsey Irizarry</h3>
+                <p class="text-sm">DPA, MCMSc, PA-C</p>
+              </div>
+              <div class="team-hover absolute inset-0 justify-end items-center text-white flex flex-col text-center px-4 pb-2 transition-transform duration-500 ease-in-out z-20">
+                <h3 class="text-lg font-bold mb-2">Charity Ramsey Irizarry</h3>
+                <p class="text-sm mb-4">I have had the unique opportunity to serve both patients and students.</p>
+                <button
+                  type="button"
+                  class="border border-white px-4 py-1 rounded hover:bg-white hover:text-black transition open-modal"
+                  data-name="Charity Ramsey Irizarry"
+                  data-title="DPA, MCMSc, PA-C"
+                  data-description="I have had the unique opportunity to serve both patients and students in clinical and academic settings throughout of my career. I earned my PA certification in 2001 and my clinical background is in Internal Medicine and Women’s Health. Additionally, I have over 20 years of experience in Physician Assistant education, which includes being the Director of Clinical Education at Barry University overseeing campuses in Miami and St. Petersburg, Florida and in the US Virgin Islands. I have PA faculty experience over two ten-year cycles in earning continuing accreditation.
+
+I was the inaugural Program Director of the San Juan Bautista PA Program and the first in Puerto Rico to earn provisional accreditation. I worked successfully to overcome several challenges created during COVID and matriculate the entering class. Currently I am a faculty member of Touro University and the PA Program Development team for new PA programs seeking and earning provisional ARC accreditation. My areas of interest in education include health promotion and disease prevention, advanced clinical skills and reasoning, and academic and professional integrity."
+                >
+                  Read More
+                </button>
+              </div>
+            </div>
+
+            <!-- Joseph -->
+            <div data-aos="flip-left" class="team-card relative group w-full max-w-[300px] h-[400px] overflow-hidden rounded-xl shadow-md">
+              <img src="images/team-joseph.webp" alt="Joseph Faiella" class="team-photo w-full h-full object-cover transition-transform duration-500" />
+              <div class="absolute inset-0 bg-black/40 z-0"></div>
+              <div class="team-default absolute inset-0 flex flex-col justify-end items-center text-white text-center transition-opacity duration-500 z-10 px-4 pb-6">
+                <h3 class="text-lg font-bold mb-2">Joseph Faiella</h3>
+                <p class="text-sm">PA-C, PhD FACC</p>
+              </div>
+              <div class="team-hover absolute inset-0 justify-end items-center text-white flex flex-col text-center px-4 pb-2 transition-transform duration-500 ease-in-out z-20">
+                <h3 class="text-lg font-bold mb-2">Joseph Faiella</h3>
+                <p class="text-sm mb-4">Joseph Faiella-Tommasino is the Department Chair of the Physician.</p>
+                <button
+                  type="button"
+                  class="border border-white px-4 py-1 rounded hover:bg-white hover:text-black transition open-modal"
+                  data-name="Joseph Faiella"
+                  data-title="PA-C, PhD FACC"
+                  data-description="Joseph Faiella-Tommasino is the Department Chair of the Physician Assistant Programs at Touro College School of Health Sciences in New York and the Vice President of Physician Assistant Program Development and Operations for the Touro College and University Systems.
+
+He graduated from Long Island University’s Physician Assistant program in 1983. He has a Ph.D. and a Master’s degree. He is a past President of the Association of Physician Assistants in Cardiology and has been an active member of the ACC. Additionally, I served as one of the primary authors of the new Cholesterol Guidelines and recently retired from the Army Reserves Specialist Corps as a Colonel after 34 years of service."
+                >
+                  Read More
+                </button>
+              </div>
+            </div>
+
+            <!-- James -->
+            <div data-aos="flip-left" class="team-card relative group w-full max-w-[300px] h-[400px] overflow-hidden rounded-xl shadow-md">
+              <img src="images/team-james.webp" alt="James A. Van Rhee" class="team-photo w-full h-full object-cover transition-transform duration-500" />
+              <div class="absolute inset-0 bg-black/40 z-0"></div>
+              <div class="team-default absolute inset-0 flex flex-col justify-end items-center text-white text-center transition-opacity duration-500 z-10 px-4 pb-6">
+                <h3 class="text-lg font-bold mb-2">James A. Van Rhee</h3>
+                <p class="text-sm">PA-C, MS</p>
+              </div>
+              <div class="team-hover absolute inset-0 justify-end items-center text-white flex flex-col text-center px-4 pb-2 transition-transform duration-500 ease-in-out z-20">
+                <h3 class="text-lg font-bold mb-2">James A. Van Rhee</h3>
+                <p class="text-sm mb-4">James A. Van Rhee, PA-C, MS., is a graduate of Grand Valley State.</p>
+                <button
+                  type="button"
+                  class="border border-white px-4 py-1 rounded hover:bg-white hover:text-black transition open-modal"
+                  data-name="James A. Van Rhee"
+                  data-title="PA-C, MS"
+                  data-description="James A. Van Rhee, PA-C, MS., is a graduate of Grand Valley State University, 1982, with a BS in Medical Technology and a BS in Medicine, 1989, from the University of Iowa, where he completed his training as a physician assistant. In 1997 received a Master of Science in Physician Assistant Studies from Rosalind Franklin University. Mr. Van Rhee has been involved in physician assistant education for over 20 years. For one year he served as academic coordinator at a new physician assistant program at Grand Valley State University in Allendale, Michigan. He served for nine years as Department Chair and Program Director of the Department of Physician Assistant Studies at Western Michigan University, in Kalamazoo, Michigan. This was followed by three years as an associate professor, Department Chair and Program Director of the Department of Physician Assistant Studies at Wake Forest University School of Medicine in Winston-Salem, North Carolina. He moved to Northwestern University Feinberg School of Medicine to start a new physician assistant program. For four years he served as program director and associate professor; he was also a member of the Feinberg Academy of Medical Educators. In 2013, he moved to Yale School of Medicine and became the program director for the Yale School of Medicine Physician Associate program, and in 2016 became the founding program director for the Yale School of Medicine Physician Assistant Online Program. He joined Touro University in 2023 as Chair of Assessment and Remediation. He served for ten years as project director and test item writer for the Physician Assistant Education Association’s (PAEA) Physician Assistant Clinical Knowledge Rating Assessment Tool (PACKRAT). He was an ARC-PA site visitor for 16 years and served on the commission for nine years. For two years was the vice-chair of the ARC-PA commission and served two years as chair. For 17 years, he has been the course director for Kaplan Medical PANCE/PANRE board review course. He is the author of the Physician Assistant Certification and Recertification Board Review Book published by Elsevier/Saunders, and consulting editor for Physician Assistant Clinics. He was the lead editor for the PA clinical medicine textbook, Clinical Medicine for Physician Assistants. He has authored several articles and is a common presenter at the local, state, and national levels on several clinical medicine and education topics. His educational interests include problem-based learning, online education, the use of technology in education, and curriculum development and assessment."
+                >
+                  Read More
+                </button>
+              </div>
+            </div>
+
+            <!-- Jennifer -->
+            <div data-aos="flip-left" class="team-card relative group w-full max-w-[300px] h-[400px] overflow-hidden rounded-xl shadow-md">
+              <img src="images/team-jennifer.webp" alt="Jennifer Hofmann" class="team-photo w-full h-full object-cover transition-transform duration-500" />
+              <div class="absolute inset-0 bg-black/40 z-0"></div>
+              <div class="team-default absolute inset-0 flex flex-col justify-end items-center text-white text-center transition-opacity duration-500 z-10 px-4 pb-6">
+                <h3 class="text-lg font-bold mb-2">Jennifer Hofmann</h3>
+                <p class="text-sm">DMSc, MS, PA-C</p>
+              </div>
+              <div class="team-hover absolute inset-0 justify-end items-center text-white flex flex-col text-center px-4 pb-2 transition-transform duration-500 ease-in-out z-20">
+                <h3 class="text-lg font-bold mb-2">Jennifer Hofmann</h3>
+                <p class="text-sm mb-4">Dr. Jennifer Hofmann is a graduate of St. John’s University.</p>
+                <button
+                  type="button"
+                  class="border border-white px-4 py-1 rounded hover:bg-white hover:text-black transition open-modal"
+                  data-name="Jennifer Hofmann"
+                  data-title="DMSc, MS, PA-C"
+                  data-description="Dr. Jennifer Hofmann graduated from St. John’s University Catholic Medical Center’s Physician Assistant Program, in 1998, with a Master of Science in Clinical Pharmacology/ Pharmacotherapeutics. She has several years of clinical experience as a PA in family practice and pediatric psychopharmacology. She also served as a clinical pharmacology consultant for several years. In 2021 she received her doctorate in medical sciences from the University of Lynchburg. Her doctorate focused on PA education, program assessment, and maintenance of accreditation. Dr. Hofmann has more than 20 years of experience in PA education at multiple PA programs, and she is currently director of didactic education at Pace University’s NYC Physician Assistant Program. She is the course director and primary instructor for didactic medical pharmacology courses. Additionally, Dr. Hofmann is an adjunct professor at Touro University’s PA Program in New York. She also developed a post-professional pharmacology course for practicing PAs pursuing their master’s degrees. She has successfully completed four accreditation site visits in her capacity as PA faculty and Director of Didactic Education, most recently in June 2023.
+
+Dr. Hofmann has several scholarly publications, conference presentations, and internal and external grants. She is in the final stage of her publication “Mind Maps in Medical Pharmacology” with Elsevier. She received Innovative Teaching Grants, the Dean’s Award for Teaching, the Provost Book and Performance Completion Award, and the Open Education Research Grant. Dr. Hofmann also secured a five-year HRSA grant to increase the number of physician assistant students who plan to practice in primary care medicine upon graduation.
+
+Dr. Hofmann’s interests are student remediation, program assessment, online education, teaching and learning tools to reinforce pharmacology, and mentoring new faculty members. One of her new projects is to evaluate the effectiveness of pre-matriculation basic science preparation courses on student performance."
+                >
+                  Read More
+                </button>
+              </div>
+            </div>
+
+            <!-- Janelle -->
+            <div data-aos="flip-left" class="team-card relative group w-full max-w-[300px] h-[400px] overflow-hidden rounded-xl shadow-md">
+              <img src="images/team-janelle.jpg" alt="Janelle Elias" class="team-photo w-full h-full object-cover object-top transition-transform duration-500" />
+              <div class="absolute inset-0 bg-black/40 z-0"></div>
+              <div class="team-default absolute inset-0 flex flex-col justify-end items-center text-white text-center transition-opacity duration-500 z-10 px-4 pb-6">
+                <h3 class="text-lg font-bold mb-2">Janelle Elias</h3>
+                <p class="text-sm">M.S., PA-C</p>
+              </div>
+              <div class="team-hover absolute inset-0 justify-end items-center text-white flex flex-col text-center px-4 pb-2 transition-transform duration-500 ease-in-out z-20">
+                <h3 class="text-lg font-bold mb-2">Janelle Elias</h3>
+                <p class="text-sm mb-4">Program Director and Assistant Professor at Lawrence Technological University.</p>
+                <button
+                  type="button"
+                  class="border border-white px-4 py-1 rounded hover:bg-white hover:text-black transition open-modal"
+                  data-name="Janelle Elias"
+                  data-title="Program Director &amp; Assistant Professor | M.S., PA-C"
+                  data-description="Janelle Elias, M.S., PA-C
+Shelby Township, MI, 48315
+586-718-5775 | jelias2@ltu.edu
+
+Education
+4/2019 Wayne State University, Detroit, MI – Master of Science, Physician Assistant Studies
+5/2017 Oakland University, Rochester Hills, MI – Bachelor of Health Science
+
+Certification and Licensure
+Current Board-Certified Physician Assistant, NCCPA #1162979
+Current Physician Assistant License (Michigan) #5601009438
+Current Controlled Substance License #5315211073
+
+Academic, Administrative, and Clinical Appointments
+
+Administrative Appointments
+8/11/2025 – Current Program Director, Lawrence Technological University, College of Health Sciences, Physician Assistant Program, Southfield, MI
+- Provide leadership and oversight for the Physician Assistant Program, ensuring academic quality, accreditation compliance, and student success.
+1/2023 – 10/9/25 Director of Didactic Education, LTU, Physician Assistant Program
+- Assist with design, implementation, evaluation, and modification of the didactic curriculum
+4/28/2025 – 8/29/2025 Associate Program Director, LTU, Physician Assistant Program
+- Assisted the Program Director with program operations, accreditation preparation, faculty coordination, and student progression.
+
+Academic Appointments
+11/2022 – Current Assistant Professor, LTU, Physician Assistant Program
+– Course Director/Instructor of Clinical Medicine I, II, III; Admissions, Progress &amp; Promotions, Curriculum Committees
+
+Clinical Appointments
+10/2019 – 12/2022 Certified Physician Assistant, Michigan Rehabilitation Physicians, Detroit, MI
+– Oversaw care in post-acute/rehabilitation settings, interdisciplinary coordination, patient-centered treatment planning
+6/2013 – 12/2022 Certified Physician Assistant, Michigan Sports and Spine, Livonia, MI – Same as above
+
+Research &amp; Publications
+
+Research Projects (In progress):
+AI-Powered Wound Care System for Image-Based Assessment and Healing Prediction
+Role: Lead Clinical Collaborator
+Team: Patel, Y., Elias, J., Yu, Z.
+Focus: Guiding interdisciplinary development of an AI-powered wound care system to improve assessment accuracy and healing predictions; ensuring alignment with clinical standards.
+Status: Active research project; manuscript in preparation.
+
+Breast Cancer Segmentation in Mammograms Using cGAN-based UNet Framework
+Role: Clinical Collaborator
+Team: Patel, Y. (Corresponding), Elias, J., &amp; Li, F.
+Focus: Developing and validating an AI-driven segmentation model for mammograms to improve early breast cancer detection and diagnostic accuracy.
+Status: Active research project; manuscript in preparation.
+
+Publications (In Progress):
+Patel, Y., Elias, J., &amp; Li, F. (in preparation). cGAN-based UNet framework for breast cancer segmentation in mammograms. Manuscript in preparation.
+
+Patel, Y., Elias, J., &amp; Yu, Z. (in preparation). AI-powered wound care system for image-based assessment and healing prediction. Manuscript in preparation.
+
+Patel, D., Brosi, T., Bhoir, S., Yu, Z., Elias, J., Salaymeh, A., &amp; Patel, Y. (in preparation). Hybrid convolutional model with attention mechanisms for wound ROI classification. Manuscript in preparation.
+
+Grants
+(PI: B. Nandwana) 2024–2029 | $1,718,694 | U.S. Department of Health and Human Services, Health Resources and Services Administration (HRSA). Role: Co-Principal Investigator, LTU PA Rural Connections Project.
+
+Consulting
+5/2024 Revised Respiratory Therapy Program Proposal, LTU College of Health Sciences, Physician Assistant Program
+
+Service
+
+University
+Fall 2023 – Summer 2025 Faculty Senate, LTU – Treasurer since Fall 2024
+
+Department
+1/2023 – Current Student Advisor, Physician Assistant Program, LTU
+11/2022 – 2026 Student Council Advisor, Physician Assistant Program, LTU
+11/2022 – Current Admissions Committee, Physician Assistant Program, LTU
+11/2022 – Current Progress and Promotions Committee, Physician Assistant Program, LTU
+11/2022 – Current Curriculum Committee, Physician Assistant Program, LTU
+
+Community Engagement
+10/2024 Health Fair Volunteer, LTU
+1/2024 Blood Drive Volunteer, LTU
+10/2023 Health Fair Volunteer, LTU
+
+Professional Development
+8/31/25 Certificate of Completion: Pain Management Pearls: Opioids and Culture
+8/31/25 Certificate of Completion: Implicit Bias: The Michigan Requirement
+8/31/25 Certificate of Completion: Substance Use Disorders and Pain Management (MATE Act Training)
+2025 CMHA 2025 Annual Summer Conference
+3/2025 PAEA Associate Program Directors Virtual Retreat
+10/2024 MAPA Conference (attendee)
+5/2024 Certificate of Completion: Human Trafficking and Exploitation
+5/2024 Certificate of Completion: Implicit Bias: The Michigan Requirement
+5/2024 Certificate of Completion: Substance Use Disorders and Pain Management (MATE Act Training)
+5/2024 Certificate of Completion: Opioid Safety Balancing Benefits and Risks
+5/2024 Certificate of Completion: Responsible and Effective Opioid Prescribing
+6/2023 PAEA New Faculty Jump Start
+2023 Urgent Care Updates Conference (attendee)"
+                >
+                  Read More
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Team Modal -->
+      <div id="teamModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/60 p-4">
+        <div class="bg-white rounded-xl shadow-xl w-full max-w-2xl mx-4 relative">
+          <button id="closeModal" type="button" class="absolute top-4 right-4 text-gray-600 hover:text-black text-2xl font-bold" aria-label="Close">&times;</button>
+          <div class="p-8 max-h-[80vh] overflow-y-auto">
+            <h3 id="modalName" class="text-2xl font-bold text-center mb-1"></h3>
+            <p id="modalTitle" class="text-md text-center font-semibold text-gray-700 mb-6"></p>
+            <p id="modalDescription" class="text-gray-800 leading-relaxed whitespace-pre-line"></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Training / Program Banner -->
+      <section
+        id="training"
+        class="scroll-mt-22 relative overflow-hidden bg-fixed bg-center bg-cover flex items-center justify-center text-white min-h-[320px] py-16 px-4"
+        style="background-image: url('images/training-bg.webp')"
+      >
+        <div class="relative w-full max-w-2xl mx-auto bg-white/90 p-8 rounded-lg shadow-lg text-center text-black flex flex-col items-center justify-center">
+          <h2 class="text-2xl md:text-3xl font-bold mb-6">First-class Physician Assistant Program Consultants Pa Accreditation. Done Right..</h2>
+          <a href="mailto:tapaconsultants@gmail.com" class="inline-block bg-blue-900 hover:bg-blue-700 text-white px-6 py-2 rounded-md font-semibold">
+            Email Us Today To Get Started
+          </a>
+        </div>
+      </section>
+
+      <!-- Program Cards -->
+      <section class="bg-white py-20">
+        <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-4 gap-6 text-center">
+          <div data-aos="zoom-in-down" class="feature-card bg-gray-100 p-6 rounded-lg shadow-md">
+            <h3 class="text-4xl font-bold text-blue-900 mb-2">01</h3>
+            <h4 class="font-bold text-blue-900">Accreditation Consulting</h4>
+            <p class="text-sm mt-2">
+              Tommasino Associates LLC provides top-of-the-line accreditation consulting to ensure “<strong>mission success</strong>” for your PA program regardless of where you are in the process.
+            </p>
+          </div>
+          <div data-aos="zoom-in-down" class="feature-card bg-gray-100 p-6 rounded-lg shadow-md">
+            <h3 class="text-4xl font-bold text-blue-900 mb-2">02</h3>
+            <h4 class="font-bold text-blue-900">Mock Site Visits</h4>
+            <p class="text-sm mt-2">Tommasino Associates LLC provides mock site visits to help your team prepare for “<strong>the real deal</strong>.”</p>
+          </div>
+          <div data-aos="zoom-in-down" class="feature-card bg-gray-100 p-6 rounded-lg shadow-md">
+            <h3 class="text-4xl font-bold text-blue-900 mb-2">03</h3>
+            <h4 class="font-bold text-blue-900">Faculty &amp; Staff Training</h4>
+            <p class="text-sm mt-2">Tommasino Associates LLC provides ongoing faculty &amp; staff training to ensure programmatic success!</p>
+          </div>
+          <div data-aos="zoom-in-down" class="feature-card bg-gray-100 p-6 rounded-lg shadow-md">
+            <h3 class="text-4xl font-bold text-blue-900 mb-2">04</h3>
+            <h4 class="font-bold text-blue-900">Legal &amp; Regulatory Oversite</h4>
+            <p class="text-sm mt-2">
+              Both health care and education are facing increasingly complex legal and regulatory. Let Tommasino Associates LLC guide your program to ensure your program exceeds all of the
+              multi-disciplinary requirements.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="scroll-mt-22 bg-[#0B1B57] py-12 px-4">
+        <div class="max-w-5xl mx-auto w-full flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
+          <h2 class="text-white text-2xl md:text-3xl font-bold text-center">Please Email Us to Get Started</h2>
+          <div class="hidden md:block self-stretch w-px bg-white/80 min-h-[4rem]" aria-hidden="true"></div>
+          <a href="mailto:tapaconsultants@gmail.com" class="border border-white text-white font-semibold px-6 py-3 rounded hover:bg-white hover:text-[#0B1B57] transition">EMAIL US</a>
+        </div>
+      </section>
+
+      <!-- Contact info on image bg -->
+      <div class="relative bg-cover bg-fixed bg-center" style="background-image: url('images/services-bg.webp')">
+        <div class="relative bg-black/50 py-10 px-4">
+          <div class="max-w-4xl mx-auto w-full grid grid-cols-1 sm:grid-cols-2 gap-6 text-white text-center">
+            <div class="border border-white p-4 rounded">
+              <div class="text-2xl mb-1" aria-hidden="true">📧</div>
+              <h3 class="font-semibold">Email</h3>
+              <p><a href="mailto:tapaconsultants@gmail.com" class="hover:underline">tapaconsultants@gmail.com</a></p>
+            </div>
+            <div class="border border-white p-4 rounded">
+              <div class="text-2xl mb-1" aria-hidden="true">📍</div>
+              <h3 class="font-semibold">Address</h3>
+              <p>USA</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Featured Videos -->
+      <section class="bg-[#0B1B57] py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+          <h2 class="text-white text-2xl md:text-3xl font-bold mb-8">Featured Videos</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="overflow-hidden rounded-2xl border border-white/15 bg-white/5 shadow-2xl">
+              <div class="aspect-[9/16] bg-black">
+                <iframe
+                  src="https://www.tiktok.com/player/v1/7593061496729505044?controls=1&loop=0&description=0&music_info=0&rel=0"
+                  class="h-full w-full"
+                  allow="encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy"
+                  title="TikTok video 1"
+                ></iframe>
+              </div>
+            </div>
+            <div class="overflow-hidden rounded-2xl border border-white/15 bg-white/5 shadow-2xl">
+              <div class="aspect-[9/16] bg-black">
+                <iframe
+                  src="https://www.tiktok.com/player/v1/7584603781116022032?controls=1&loop=0&description=0&music_info=0&rel=0"
+                  class="h-full w-full"
+                  allow="encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy"
+                  title="TikTok video 2"
+                ></iframe>
+              </div>
+            </div>
+            <div class="overflow-hidden rounded-2xl border border-white/15 bg-white/5 shadow-2xl">
+              <div class="aspect-[9/16] bg-black">
+                <iframe
+                  src="https://www.tiktok.com/player/v1/7582009428044483857?controls=1&loop=0&description=0&music_info=0&rel=0"
+                  class="h-full w-full"
+                  allow="encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy"
+                  title="TikTok video 3"
+                ></iframe>
+              </div>
+            </div>
+            <div class="overflow-hidden rounded-2xl border border-white/15 bg-white/5 shadow-2xl">
+              <div class="aspect-[9/16] bg-black">
+                <iframe
+                  src="https://www.tiktok.com/player/v1/7572353163618012436?controls=1&loop=0&description=0&music_info=0&rel=0"
+                  class="h-full w-full"
+                  allow="encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy"
+                  title="TikTok video 4"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- AI Modal -->
+    <div id="aiModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/70 p-4">
+      <div class="bg-white rounded-xl shadow-xl w-full max-w-6xl relative">
+        <button id="closeAiModal" type="button" class="absolute top-4 right-4 text-gray-500 hover:text-black text-2xl font-bold z-10" aria-label="Close">&times;</button>
+        <h2 class="text-2xl md:text-3xl font-bold text-center py-6 px-6 border-b">AI Integration Services</h2>
+        <div class="px-6 pb-8 pt-6">
+          <div class="w-full h-[75vh] rounded-lg overflow-hidden shadow border img-placeholder flex-col gap-2">
+            <span>AI presentation / PDF placeholder</span>
+            <span class="text-xs font-normal normal-case tracking-normal opacity-80">Drop the slide deck or PDF URL here later</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white pt-10 pb-6">
+      <div class="flex flex-col items-center px-4">
+        <img src="images/logo-footer.webp" alt="PA Program Consultant Logo" class="h-12 mb-4" />
+
+        <nav class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm font-semibold mb-4">
+          <a href="#home" class="hover:underline">Home</a>
+          <a href="#about" class="hover:underline">About Us</a>
+          <a href="#services" class="hover:underline">Accreditation Services</a>
+          <a href="#staff" class="hover:underline">Our Staff</a>
+          <a href="#training" class="hover:underline">Staff Training</a>
+        </nav>
+
+        <p class="text-sm text-center mb-4">Copyrights © 2024 Physician Assistant Program Consultant</p>
+
+        <hr class="w-3/4 border-gray-700 mb-4" />
+
+        <div class="flex space-x-6">
+          <a href="#facebook" class="hover:opacity-75" aria-label="Facebook" rel="noopener noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M22 12.07C22 6.48 17.52 2 11.93 2S1.86 6.48 1.86 12.07c0 5.02 3.66 9.18 8.44 9.93v-7.03H7.9v-2.9h2.4V9.41c0-2.37 1.41-3.68 3.57-3.68 1.03 0 2.12.18 2.12.18v2.33h-1.2c-1.18 0-1.55.73-1.55 1.48v1.78h2.64l-.42 2.9h-2.22V22c4.78-.75 8.44-4.91 8.44-9.93z" />
+            </svg>
+          </a>
+          <a href="#instagram" class="hover:opacity-75" aria-label="Instagram" rel="noopener noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 01-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 017.8 2zm-.2 2A3.6 3.6 0 004 7.6v8.8A3.6 3.6 0 007.6 20h8.8a3.6 3.6 0 003.6-3.6V7.6A3.6 3.6 0 0016.4 4H7.6zm9.65 1.5a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 2a3 3 0 100 6 3 3 0 000-6z" />
+            </svg>
+          </a>
+          <a href="#linkedin" class="hover:opacity-75" aria-label="LinkedIn" rel="noopener noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4V23h-4V8.5zM8.5 8.5h3.8v2h.05c.53-1 1.84-2.05 3.8-2.05 4.06 0 4.8 2.67 4.8 6.15V23h-4v-6.6c0-1.57-.03-3.6-2.2-3.6-2.2 0-2.54 1.72-2.54 3.5V23h-4V8.5z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js?v=22"></script>
+  </body>
+</html>
